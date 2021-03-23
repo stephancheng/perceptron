@@ -5,14 +5,14 @@ This project will build a fully connected perceptron with 1 hidden layer to clas
 
 ### Feature extration
 Input features are extracted by Hu Moments, Haralick Texture and 3-color Histogram.
-Using the feature_extract.py to transform the images into csv files that will later be passed to the model
+Using the "feature_extract.py" to transform the images into csv files that will later be passed to the model.
 You will need txt files with first column as link to the image and second as its class value.
 The txt files are named train.txt, val.txt, test.txt.
-Spcify bin size, fix image size in the main function.
+Specify bin size, fix image size in the main function.
 
 ### Perceptron
 Sigmoid activation is appied in the hidden layer and softmax is appied in the output.
-Regularization is also included, user can specify whether to add it by the parameter.
+Regularization is also included, user can specify whether to add it by the parameter "lambda".
 To build a model, make the class perceptron with following parameters:
 * x_train: the feature of the image, read from the csv file from feature_extract.py
 * y_train: one hot label, read from the class value of txt file and turn into one hot label by the function
@@ -27,7 +27,7 @@ The optimization is done by stochastic gradient descent and Back-propagation.
 Parameter turning is done by the validation dataset.
 First create the class "perceptron", and specify x_train (feature), y_train (class label), num_node (number of node in the hidden layer), learning_rate, minibatch_size, lambd (0 if no Regularization) and epoch
 Prepare list of candidate parameter, the function "grid_search_perceptron" can take up to two list of parameters.
-It also have a function to save the validation result into CSV (including parameters,accuracy, running time)
+It also have a function to save the validation result into CSV (including parameters,accuracies, running time)
 
 ### performance evaluation
 The file "randomforest.py" and "XGboost" will provide performances using random forest classifier and XGboost from sklearn package
