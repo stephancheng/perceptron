@@ -25,8 +25,8 @@ The optimization is done by stochastic gradient descent and Back-propagation.
 
 ### parameter turning
 Parameter turning is done by the validation dataset.
-First create the class "perceptron", and specify x_train (feature), y_train (class label), num_node (number of node in the hidden layer), learning_rate, minibatch_size, lambd (0 if no Regularization) and epoch
-Prepare list of candidate parameter, the function "grid_search_perceptron" can take up to two list of parameters.
+First create the class "perceptron" with required parameters. Put 0 for lambd if no regularization
+Then prepare lists of candidate parameters, the function "grid_search_perceptron" can take up to two list of parameters.
 It also have a function to save the validation result into CSV (including parameters,accuracies, running time)
 
 ### performance evaluation
