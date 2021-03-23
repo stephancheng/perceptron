@@ -3,11 +3,13 @@
 ## Introduction
 This project will build a fully connected perceptron with 1 hidden layer to classify an image data set that have 50 classes.
 
+## Data
+You will need 3 txt files, each with first column as link to the image and second as its class value.
+The txt files are named train.txt, val.txt, test.txt.
+
 ### Feature extration
 Input features are extracted by Hu Moments, Haralick Texture and 3-color Histogram.
 Using the "feature_extract.py" to transform the images into csv files that will later be passed to the model.
-You will need txt files with first column as link to the image and second as its class value.
-The txt files are named train.txt, val.txt, test.txt.
 Specify bin size, fix image size in the main function.
 
 ### Perceptron
